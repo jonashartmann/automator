@@ -8,8 +8,7 @@
   "repository": "jonashartmann/nap",
   "author": {
     "name": "Jonas Hartmann",
-    "email": "jonasharty@gmail.com",
-    "url": "localhost"
+    "email": "jonasharty@gmail.com"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -20,8 +19,7 @@
   },
   "files": [
     "index.js",
-    "index.html",
-    "index.css"
+    "index.html"
   ],
   "keywords": [
     "electron-app"
@@ -29,5 +27,9 @@
   "devDependencies": {
     "electron-packager": "^3.1.0",
     "electron-prebuilt": "^0.25.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.5",
+    "electron-debug": "^0.2.0"
   }
 }

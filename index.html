@@ -1,17 +1,127 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class="container">
-			<header>
-				<h1>Electron boilerplate</h1>
-			</header>
-			<section class="main"></section>
-			<footer></footer>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Automator 27</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid" ng-app="app" ng-controller="appCtrl as app">
+	<div class="row">
+		<div class="col-md-12" ng-controller="alertCtrl as ale">
+			<alert ng-repeat="alert in ale.alerts" type="{{alert.type}}" close="ale.closeAlert($index)">{{alert.msg}}</alert>
+			<!-- <button type="button" class="btn btn-primary" ng-click="ale.addAlert();">
+								Create alert
+							</button> -->
 		</div>
-	</body>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<!-- <ul class="nav nav-stacked nav-pills">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li class="dropdown pull-right">
+					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#">Action</a>
+						</li>
+						<li>
+							<a href="#">Another action</a>
+						</li>
+						<li>
+							<a href="#">Something else here</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="#">Separated link</a>
+						</li>
+					</ul>
+				</li>
+			</ul> -->
+		</div>
+		<div class="col-md-9">
+			<h3 class="text-center">
+				Automator 27 @ your service.
+			</h3>
+			<form name="appForm" ng-submit="app.automate();" role="form">
+				<div class="form-group" ng-class="{'has-error': appForm.urlInput.$error.url}">
+
+					<label for="url">
+						URL
+					</label>
+					<input ng-model="app.url" type="url" class="form-control" id="url" name="urlInput" required="true">
+					<span class="warning" ng-show="appForm.urlInput.$error.url">
+      					Not a valid url!
+      				</span>
+				</div>
+				<div class="form-group" ng-class="{'has-error': appForm.amountInput.$error.number}">
+
+					<label for="amount">
+						Amount of calls
+					</label>
+					<input ng-model="app.amount" type="number" class="form-control" id="amount" name="amountInput">
+					<span class="warning" ng-show="appForm.amountInput.$error.number">
+      					Not a valid amount!
+      				</span>
+				</div>
+				<div class="checkbox">
+
+					<label>
+						<input ng-model="app.agree" type="checkbox"> I agree
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default">
+					Do it!
+				</button>
+			</form>
+			 <!-- <a id="modal-155284" href="#modal-container-155284" role="button" class="btn" data-toggle="modal">Launch demo modal</a> -->
+
+			<div class="modal fade" id="modal-container-155284" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								Modal title
+							</h4>
+						</div>
+						<div class="modal-body">
+							...
+						</div>
+						<div class="modal-footer">
+
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								Close
+							</button>
+							<button type="button" class="btn btn-primary">
+								Save changes
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+    <script type="text/javascript" src="js/services/alertSrv.js"></script>
+    <script type="text/javascript" src="js/controllers/alertCtrl.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
