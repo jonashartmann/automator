@@ -1,11 +1,11 @@
 {
-  "name": "nap",
-  "productName": "Nap",
-  "version": "0.0.0",
-  "description": "My mind-blowing app",
+  "name": "automator",
+  "productName": "Automator 27",
+  "version": "0.1.0",
+  "description": "Automate.",
   "license": "MIT",
   "main": "index.js",
-  "repository": "jonashartmann/nap",
+  "repository": "https://github.com/jonashartmann/automator",
   "author": {
     "name": "Jonas Hartmann",
     "email": "jonasharty@gmail.com"

@@ -1,6 +1,6 @@
-# nap
+# Automator 27
 
-> My mind-blowing app
+> Automate.
 
 
 ## Dev
@@ -24,4 +24,4 @@ $ npm run build
 
 ## License
 
-MIT © [Jonas Hartmann](http://localhost)
+MIT © [Jonas Hartmann](http://jonashartmann.github.io)
